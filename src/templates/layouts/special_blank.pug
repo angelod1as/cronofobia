@@ -1,0 +1,83 @@
+//#include virtual="/virtual/common/config.inc.html"
+block variables
+	- var months = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+	- var ENV = (process.env.NODE_EV === 'production' || process.env.NODE_EV === 'staging') ? process.env.NODE_EV : 'development';
+	- var section= config.section;
+	- var section_slug= config.section.toLowerCase();
+	- var credit = config.credit;
+	- var origin = config.origin;
+	- var publish_date = config.publish_date.split('/')[0]+'.'+months[config.publish_date.split('/')[1]-1]+'.'+config.publish_date.split('/')[2];
+	- var publish_time = config.publish_time.replace(':', 'h');
+	- var update_date = config.update_date.split('/')[0]+'.'+months[config.update_date.split('/')[1]-1]+'.'+config.update_date.split('/')[2];
+	- var update_time = config.update_time.replace(':', 'h');
+	- var publish_date_year = config.publish_date.split('/')[2];
+	- var publish_date_month = config.publish_date.split('/')[1];
+	- var publish_date_day = config.publish_date.split('/')[0];
+	- var publish_time_hour = config.publish_time.split(':')[0];
+	- var publish_time_minute = config.publish_time.split(':')[1];
+	- var update_date_year = config.update_date.split('/')[2];
+	- var update_date_month = config.update_date.split('/')[1];
+	- var update_date_day = config.update_date.split('/')[0];
+	- var update_time_hour = config.update_time.split(':')[0];
+	- var update_time_minute = config.update_time.split(':')[1];
+
+<!--#set var="cover_date" value="#{publish_date}"-->
+<!--#set var="cover_date_year" value="#{publish_date_year}"-->
+<!--#set var="cover_date_month" value="#{publish_date_month}"-->
+<!--#set var="cover_date_day" value="#{publish_date_day}"-->
+<!--#set var="cover_time" value="#{publish_time}"-->
+<!--#set var="cover_time_hour" value="#{publish_time_hour}"-->
+<!--#set var="cover_time_minute" value="#{publish_time_minute}"-->
+<!--#set var="live_url" value="#{url}"-->
+<!--#set var="share_image" value="#{share_image}"-->
+<!--#set var="share_type" value="#{share_type}"-->
+<!--#set var="share_description" value="#{description}"-->
+<!--#set var="share_title" value="#{share_title}"-->
+<!--#set var="section" value="#{section}"-->
+<!--#set var="section_slug" value="#{section_slug}"-->
+<!--#set var="chan" value="#{chan}"-->
+<!--#set var="image" value="#{share_image}"-->
+<!--#set var="kicker" value="#{kicker}"-->
+<!--#set var="kicker_link" value="#{kicker_link}"-->
+<!--#set var="title" value="#{title}"-->
+<!--#set var="lead" value="#{lead}"-->
+<!--#set var="update_date" value="#{update_date}"-->
+<!--#set var="update_date_year" value="#{update_date_year}"-->
+<!--#set var="update_date_month" value="#{update_date_month}"-->
+<!--#set var="update_date_day" value="#{update_date_day}"-->
+<!--#set var="update_time" value="#{update_time}"-->
+<!--#set var="update_time_hour" value="#{update_time_hour}"-->
+<!--#set var="update_time_minute" value="#{update_time_minute}"-->
+<!--#set var="keywords" value="#{keywords}"-->
+<!--#set var="credit" value="#{credit}"-->
+<!--#set var="origin" value="#{origin}"-->
+<!--#set var="url" value="#{url}"-->
+
+doctype html
+html.no-scroll(lang="pt-br")
+	head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#")
+		meta(charset='UTF-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, shrink-to-fit=no')
+		//#include virtual="/virtual/$version/common/head.inc.html"
+		style(type='text/css', media='screen') .loading{position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;z-index:1001;text-align:center;display:flex;justify-content:center;align-items:center}.loader{border:12px solid #e0e0e0;border-radius:50%;border-top:12px solid #0078a4;width:100px;height:100px;-webkit-animation:spin .8s linear infinite;animation:spin .8s linear infinite}@-webkit-keyframes spin{0%{-webkit-transform:rotate(0)}100%{-webkit-transform:rotate(360deg)}}@keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}.no-scroll{overflow:hidden}
+		link(rel='stylesheet', href='http://arte.folha.uol.com.br/library/folhastyle/2.1/css/folhastyle-min.css')
+		link(rel='stylesheet', href='css/main.css')
+
+	body.no-scroll
+		.loading
+			.loader
+		main.folhastyle
+			block content
+
+		footer
+			.container
+				.row
+					.col.col--s-1-1
+						p.copyright
+							small
+								| Copyright Folha de S.Paulo. Todos os direitos reservados. É proibida a reprodução do conteúdo desta página em qualquer meio de comunicação, eletrônico ou impresso, sem autorização escrita da Folhapress (
+								a(href='mailto:pesquisa@folhapress.com.br', target='_blank') pesquisa@folhapress.com.br
+								| ).
+
+		script(src="http://arte.folha.uol.com.br/library/template/barrafolha/2015/js/barrafolha.min.js")
