@@ -1,58 +1,7 @@
-//#include virtual="/virtual/common/config.inc.html"
 
 block variables
 	- var months = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
 	- var ENV = (process.env.NODE_EV === 'production' || process.env.NODE_EV === 'staging') ? process.env.NODE_EV : 'development';
-	//- - var section= config.section;
-	//- - var section_slug= config.section.toLowerCase();
-	//- - var credit = config.credit;
-	//- - var origin = config.origin;
-	//- - var publish_date = config.publish_date.split('/')[0]+'.'+months[config.publish_date.split('/')[1]-1]+'.'+config.publish_date.split('/')[2];
-	//- - var publish_time = config.publish_time.replace(':', 'h');
-	//- - var update_date = config.update_date.split('/')[0]+'.'+months[config.update_date.split('/')[1]-1]+'.'+config.update_date.split('/')[2];
-	//- - var update_time = config.update_time.replace(':', 'h');
-	//- - var publish_date_year = config.publish_date.split('/')[2];
-	//- - var publish_date_month = config.publish_date.split('/')[1];
-	//- - var publish_date_day = config.publish_date.split('/')[0];
-	//- - var publish_time_hour = config.publish_time.split(':')[0];
-	//- - var publish_time_minute = config.publish_time.split(':')[1];
-	//- - var update_date_year = config.update_date.split('/')[2];
-	//- - var update_date_month = config.update_date.split('/')[1];
-	//- - var update_date_day = config.update_date.split('/')[0];
-	//- - var update_time_hour = config.update_time.split(':')[0];
-	//- - var update_time_minute = config.update_time.split(':')[1];
-
-<!--#set var="cover_date" value="#{publish_date}"-->
-<!--#set var="cover_date_year" value="#{publish_date_year}"-->
-<!--#set var="cover_date_month" value="#{publish_date_month}"-->
-<!--#set var="cover_date_day" value="#{publish_date_day}"-->
-<!--#set var="cover_time" value="#{publish_time}"-->
-<!--#set var="cover_time_hour" value="#{publish_time_hour}"-->
-<!--#set var="cover_time_minute" value="#{publish_time_minute}"-->
-<!--#set var="live_url" value="#{url}"-->
-<!--#set var="share_image" value="#{share_image}"-->
-<!--#set var="share_type" value="#{share_type}"-->
-<!--#set var="share_description" value="#{description}"-->
-<!--#set var="share_title" value="#{share_title}"-->
-<!--#set var="section" value="#{section}"-->
-<!--#set var="section_slug" value="#{section_slug}"-->
-<!--#set var="chan" value="#{chan}"-->
-<!--#set var="image" value="#{share_image}"-->
-<!--#set var="kicker" value="#{kicker}"-->
-<!--#set var="kicker_link" value="#{kicker_link}"-->
-<!--#set var="title" value="#{title}"-->
-<!--#set var="lead" value="#{lead}"-->
-<!--#set var="update_date" value="#{update_date}"-->
-<!--#set var="update_date_year" value="#{update_date_year}"-->
-<!--#set var="update_date_month" value="#{update_date_month}"-->
-<!--#set var="update_date_day" value="#{update_date_day}"-->
-<!--#set var="update_time" value="#{update_time}"-->
-<!--#set var="update_time_hour" value="#{update_time_hour}"-->
-<!--#set var="update_time_minute" value="#{update_time_minute}"-->
-<!--#set var="keywords" value="#{keywords}"-->
-<!--#set var="credit" value="#{credit}"-->
-<!--#set var="origin" value="#{origin}"-->
-<!--#set var="url" value="#{url}"-->
 
 doctype html
 html(lang="pt-br")
@@ -60,17 +9,36 @@ html(lang="pt-br")
 		meta(charset='UTF-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
 		meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, shrink-to-fit=no')
-		//#include virtual="/virtual/$version/common/head.inc.html"
-		style(type='text/css', media='screen') .loading{position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;z-index:1001;text-align:center;display:flex;justify-content:center;align-items:center}.loader{border:12px solid #e0e0e0;border-radius:50%;border-top:12px solid #0078a4;width:100px;height:100px;-webkit-animation:spin .8s linear infinite;animation:spin .8s linear infinite}@-webkit-keyframes spin{0%{-webkit-transform:rotate(0)}100%{-webkit-transform:rotate(360deg)}}@keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}.no-scroll{overflow:hidden}
-
-		link(rel='stylesheet', href='//arte.folha.uol.com.br/library/folhastyle/2.1/css/folhastyle-min.css')
+		// Schema.org markup for Google+
+		meta(itemprop='name', content='Cronofobia')
+		meta(itemprop='description', content='Cronofobia - newsletter, zine e dispersão')
+		meta(itemprop='image', content='http://www.example.com/image.jpg')
+		// Twitter Card data
+		meta(name='twitter:card', content='summary_large_image')
+		meta(name='twitter:site', content='@_cronofobico')
+		meta(name='twitter:title', content='Cronofobia')
+		meta(name='twitter:description', content='Cronofobia - newsletter, zine e dispersão')
+		meta(name='twitter:creator', content='@_cronofobico')
+		// Twitter summary card with large image must be at least 280x150px
+		meta(name='twitter:image:src', content='http://www.example.com/image.jpg')
+		// Open Graph data
+		meta(property='og:title', content='Cronofobia')
+		meta(property='og:type', content='article')
+		meta(property='og:url', content='http://www.cronofobia.com/')
+		meta(property='og:image', content='http://example.com/image.jpg')
+		meta(property='og:description', content='Cronofobia - newsletter, zine e dispersão')
+		meta(property='og:site_name', content='Cronofobia')
+		meta(property='article:published_time', content='2018-05-25T12:12:00+03:00')
+		meta(property='article:modified_time', content='2018-05-25T12:12:00+03:00')
+		meta(property='article:section', content='Cronofobia')
+		meta(property='article:tag', content='cronofobia')
+		// MAILCHIMP
+		link(href='//cdn-images.mailchimp.com/embedcode/classic-10_7.css', rel='stylesheet', type='text/css')
+		// MAIN STYLESHEET
+		link(rel='stylesheet', href='style.css', type='text/css')
 
 	body
-
-		//#include virtual="/virtual/$version/common/header.inc.html"
 		main.folhastyle
 			article.container.text
-				//#include virtual="/virtual/$version/common/header-news.inc.html"
 				.row_flex.graphic#root
 					block content
-		//#include virtual="/virtual/$version/common/footer.inc.html"

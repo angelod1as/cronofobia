@@ -21,7 +21,7 @@
 		],
 		"react/no-unused-state": [0],
     "react/prefer-stateless-function": [
-      1,
+      0,
       {
         "ignorePureComponents": false
       }
