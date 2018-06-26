@@ -10,7 +10,7 @@ const configPath = 'poder/2018/reef';
 
 const PATHS = {
 	staging: path.resolve('/Volumes/staging/arte.folha.com.br/', configPath),
-	build: path.resolve(__dirname, '../build'),
+	build: path.resolve(__dirname, '../docs'),
 	src: path.resolve(__dirname, '../src'),
 	js: path.resolve(__dirname, '../src/assets/scripts'),
 };

@@ -1,9 +1,9 @@
 {
-  "name": "boilerplate-react",
+  "name": "cronofobia",
   "version": "1.0.0",
-  "description": "boilerplate with webpack, react and babel",
+  "description": "zines",
   "main": "index.html",
-  "author": "Pilker",
+  "author": "Angelo Dias",
   "license": "MIT",
   "private": true,
   "devDependencies": {
@@ -51,11 +51,7 @@
   },
   "scripts": {
     "build": "webpack -p --config ./webpack/webpack.config.prod.js",
-    "serve": "webpack-dev-server --color --hot --config ./webpack/webpack.config.dev.js",
-    "staging": "webpack --config ./webpack/webpack.config.staging.js",
-    "deploy/staging": "./bin/staging.sh",
-    "teste": "./bin/teste.sh",
-    "deploy/production": "./bin/production.sh"
+    "serve": "webpack-dev-server --color --hot --config ./webpack/webpack.config.dev.js"
   },
   "dependencies": {
     "jsonp": "^0.2.1",
