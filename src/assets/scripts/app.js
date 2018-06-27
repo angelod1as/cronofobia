@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Opening from './components/opening';
-// import Mailchimp from './components/mailchimp';
+import Mailchimp from './components/mailchimp';
 
 export default class App extends Component {
 	render() {
@@ -11,7 +11,7 @@ export default class App extends Component {
 		return (
 			<div className="main">
 				<Opening />
-				{/* <Mailchimp /> */}
+				<Mailchimp />
 			</div>
 		);
 	}

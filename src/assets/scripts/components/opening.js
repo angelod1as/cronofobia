@@ -39,7 +39,6 @@ export default class Opening extends Component {
 					</small>
 				</p>
 			</div>
-
 		);
 	}
 }
