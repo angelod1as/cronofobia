@@ -18,12 +18,12 @@ export default class Mailchimp extends Component {
 						</div>
 						<div className="mc-field-group">
 							<label htmlFor="mce-FNAME">Primeiro nome
-								<input type="text" defaultValue="Zé" name="FNAME" className id="mce-FNAME" />
+								<input type="text" defaultValue="Zé" name="FNAME" id="mce-FNAME" />
 							</label>
 						</div>
 						<div className="mc-field-group">
 							<label htmlFor="mce-LNAME">Sobrenome
-								<input type="text" defaultValue="Silva" name="LNAME" className id="mce-LNAME" />
+								<input type="text" defaultValue="Silva" name="LNAME" id="mce-LNAME" />
 							</label>
 						</div>
 						<div className="mc-field-group size1of2">

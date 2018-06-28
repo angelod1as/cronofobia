@@ -1,12 +1,9 @@
+@import	'./vendor/variables.styl'
 @import	'./vendor/rupture.styl'
 
-@import url('https://fonts.googleapis.com/css?family=Averia+Sans+Libre:300,300i,400,400i,700,700i');
-
-$font = "Averia Sans Libre", Arial, Helvetica, sans-serif
-
 html, body
-	background-color #333
-	color white
+	background-color $black
+	color $white
 	font-family $font
 	font-size 18px
 	line-height 1.5em
@@ -31,17 +28,38 @@ h1
 	+below(600px)
 		font-size 2.5em
 
+h3
+	font-size: 1.3em
+
 .lead
 	margin 0 0 2em 0
 	font-style italic
 
 p
 	font-size 1.3em
+	line-height: 1.3em
 
-.opening
-	margin-bottom 60px
+button
+	display: block
+	text-align: center
+	width: 120px
+	color: $black
+	background-color: $white
+	border: 1px solid $white
+	border-radius: 5px
+	margin: 20px 0
+	padding: 10px
+	font-size: 1em
+	font-family: $font
+	&:hover
+		background-color: $black
+		color: $white
 
-#mc_embed_signup
-	form
-		margin 0
-		padding 0
+.main > *
+	padding-bottom: 20px
+	margin-bottom 40px
+	border-bottom 1px solid $lwhite
+
+@import	'./vendor/mailchimp.styl'
+
+@import	'./vendor/store.styl'

@@ -1,1 +1,50 @@
-data({"data": "data"})
+data(
+{
+	"produtos": [
+		{
+			"id": 1,
+			"title": "zine1",
+			"desc": "descrição zine 1",
+			"img": "http://via.placeholder.com/360x510",
+			"minprice": 5,
+			"sug": 5,
+			"url": "url",
+			"qtd": 0,
+			"userprice": 0
+		},
+		{
+			"id": 2,
+			"title": "zine 2",
+			"desc": "descrição zine 2",
+			"img": "http://via.placeholder.com/360x510",
+			"minprice": 5,
+			"sug": 5,
+			"url": "url",
+			"qtd": 0,
+			"userprice": 0
+		},
+		{
+			"id": 3,
+			"title": "zine 3",
+			"desc": "descrição zine 3",
+			"img": "http://via.placeholder.com/360x510",
+			"minprice": 5,
+			"sug": 5,
+			"url": "url",
+			"qtd": 0,
+			"userprice": 0
+		},
+		{
+			"id": 4,
+			"title": "zine 4",
+			"desc": "descrição zine 4",
+			"img": "http://via.placeholder.com/360x510",
+			"minprice": 5,
+			"sug": 5,
+			"url": "url",
+			"qtd": 0,
+			"userprice": 0
+		},
+	],
+}
+)

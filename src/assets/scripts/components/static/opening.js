@@ -7,7 +7,8 @@ export default class Opening extends Component {
 			<div className="opening">
 				<h1>CRONOFOBIA</h1>
 				<p className="lead">Newsletter, zine e mais distrações</p>
-				<div style={{
+				{/* IFRAME */}
+				{/* <div style={{
 					width: '100%',
 					height: 0,
 					paddingBottom: '75%',
@@ -24,7 +25,7 @@ export default class Opening extends Component {
 						className="giphy-embed"
 						allowFullScreen
 					/>
-				</div>
+				</div> */}
 				<p>Se você caiu aqui, provavelmente alguém te passou esse link.</p>
 				<p>
 					<em>
