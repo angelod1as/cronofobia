@@ -1,0 +1,40 @@
+form
+	input
+		display: block
+		color: $black
+		background-color: $white
+		border: 1px solid $black
+		border-radius: 5px
+		margin: 10px 0
+		padding: 10px
+		font-size: 1em
+		font-family: $font
+		width: 100%
+		&.birthday
+			display: inline-block
+			margin: 0
+			width: 50px
+		&[type="submit"]
+			margin: 0 !important
+
+button,
+input[type="submit"]
+	display: block
+	text-align: center
+	width: 120px
+	color: $white
+	background-color: $black
+	border: 1px solid $black
+	border-radius: 5px
+	margin: 20px 0
+	padding: 10px
+	font-size: 1em
+	font-family: $font
+	cursor: pointer
+	transition: .1s
+	&:hover
+		background-color: $white
+		color: $black
+
+.oldnews
+	font-size: 0.8em

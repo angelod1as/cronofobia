@@ -1,65 +1,23 @@
-@import	'./vendor/variables.styl'
-@import	'./vendor/rupture.styl'
+@import	'./components/variables.styl'
+@import	'./components/rupture.styl'
 
-html, body
-	background-color $black
-	color $white
-	font-family $font
-	font-size 18px
-	line-height 1.5em
-	font-weight 300
-	max-width 700px
-	margin 0 auto
+// Base (body, html)
+@import	'./components/base.styl'
 
-.main
-	margin 0 10px 10px 10px
+// definições gerais e grid
+@import	'./components/general.styl'
 
-em
-	font-weight 700
-	font-size 1.2em
+// p, h1, fonts, etct
+@import './components/type.styl'
 
-small
-	font-size .8em
+// inputs e buttons
+@import './components/form.styl'
 
-h1
-	font-size 4em
-	font-weight 700
-	margin-bottom .4em
-	+below(600px)
-		font-size 2.5em
+// mailchimp
+@import	'./components/mailchimp.styl'
 
-h3
-	font-size: 1.3em
+// abertura
+@import	'./components/opening.styl'
 
-.lead
-	margin 0 0 2em 0
-	font-style italic
-
-p
-	font-size 1.3em
-	line-height: 1.3em
-
-button
-	display: block
-	text-align: center
-	width: 120px
-	color: $black
-	background-color: $white
-	border: 1px solid $white
-	border-radius: 5px
-	margin: 20px 0
-	padding: 10px
-	font-size: 1em
-	font-family: $font
-	&:hover
-		background-color: $black
-		color: $white
-
-.main > *
-	padding-bottom: 20px
-	margin-bottom 40px
-	border-bottom 1px solid $lwhite
-
-@import	'./vendor/mailchimp.styl'
-
-@import	'./vendor/store.styl'
+// loja
+@import	'./components/store.styl'

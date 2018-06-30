@@ -4,6 +4,7 @@ data(
 		{
 			"id": 1,
 			"title": "zine1",
+			"slug": "zine1",
 			"desc": "descrição zine 1",
 			"img": "http://via.placeholder.com/360x510",
 			"minprice": 5,
@@ -15,6 +16,7 @@ data(
 		{
 			"id": 2,
 			"title": "zine 2",
+			"slug": "zine2",
 			"desc": "descrição zine 2",
 			"img": "http://via.placeholder.com/360x510",
 			"minprice": 5,
@@ -26,6 +28,7 @@ data(
 		{
 			"id": 3,
 			"title": "zine 3",
+			"slug": "zine3",
 			"desc": "descrição zine 3",
 			"img": "http://via.placeholder.com/360x510",
 			"minprice": 5,
@@ -37,6 +40,7 @@ data(
 		{
 			"id": 4,
 			"title": "zine 4",
+			"slug": "zine4",
 			"desc": "descrição zine 4",
 			"img": "http://via.placeholder.com/360x510",
 			"minprice": 5,

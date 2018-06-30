@@ -58,6 +58,7 @@
       }
 		],
 		"max-len": 0,
-		"class-methods-use-this": 0
+		"class-methods-use-this": 0,
+		"react/require-default-props": 0
   }
 }
