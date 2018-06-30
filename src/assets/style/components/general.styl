@@ -1,19 +1,25 @@
 .main
 	margin 30px
 	display: grid
-	grid-template-columns: 1fr 4fr
+	grid-template-columns: 330px 1fr 330px
 	grid-column-gap: 50px
 
-.left_container,
-.storefront,
-.cart
-	padding: 30px
+.opening, .store, .cart
+	padding: 10px 30px
 	border 1px solid $black
 	border-radius: 5px
 
-.left
+.left, .right
+	width: 330px
+
+.opening
+	width: 330px
+	position fixed
+	left: 30px
 	img
 		max-width: 270px
 
 .cart
-	min-width: 330px
+	position fixed
+	right: 30px
+	width: 330px

@@ -1,27 +1,31 @@
 .store
-	display: grid
-	grid-template-columns: 2fr 1fr
-	grid-column-gap: 50px
+	.products
+		margin-top: 50px
+		display: grid
+		grid-template-columns: repeat( auto-fit, minmax(250px, 1fr))
+		grid-gap: 100px 50px
+		img
+			width: 100%
 
-.products
-	margin-top: 50px
-	display: grid
-	grid-template-columns: repeat( auto-fit, minmax(250px, 1fr))
-	grid-gap: 100px 50px
-	img
-		width: 100%
+		h3, p, label, input // RMV MARGIN GERAL
+			margin: 0
 
-	h3, p, label, input // RMV MARGIN GERAL
-		margin: 0
-
-	.suggested
-		margin: 10px 0
-		font-weight: $bold
-		font-size: .9em
-	label
-		display block
-		margin: 10px 0
-	input
-		display inline-block
-		width: 50px
-		padding: 5px
+		.suggested
+			margin: 10px 0
+			font-weight: $bold
+			font-size: .9em
+		label
+			display block
+			margin: 10px 0
+		input
+			display inline-block
+			width: 50px
+			padding: 5px
+		.radio
+			input
+				margin: 2px 5px 0 5px
+				width: 18px
+				display: inline-block
+				vertical-align: text-top
+			.radio_margin
+				margin-right: 10px

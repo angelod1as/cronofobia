@@ -4,6 +4,10 @@ import { render } from 'react-dom';
 import '../style/main.styl';
 import App from './app';
 
+// Started > june 29th 10am
+// Finished > ??
+// author: Angelo Dias
+
 jsonp(
 	'./json/data.json',
 	{

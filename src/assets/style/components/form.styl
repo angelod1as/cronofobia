@@ -36,5 +36,14 @@ input[type="submit"]
 		background-color: $white
 		color: $black
 
+input[type="radio"]
+	&:disabled
+		cursor: not-allowed
+
+label
+	.disabled
+		opacity: .5
+		cursor: not-allowed
+
 .oldnews
 	font-size: 0.8em

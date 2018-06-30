@@ -47,10 +47,10 @@ export default class Product extends Component {
 								type="number"
 								min="0"
 								onChange={this.handleChange}
-							/> zine(s)
+							/> zine{this.state.qtd === 1 ? '' : 's'}
 						</label>
 						<label htmlFor="price">
-							E vou pagar
+							Vou pagar
 							R$ <input
 								id="price"
 								name="price"
@@ -59,7 +59,22 @@ export default class Product extends Component {
 								type="number"
 								min="0"
 								onChange={this.handleChange}
-							/> por cada
+							/> (cada)
+						</label>
+						<label htmlFor="type" className="radio">
+							<span className="radio_margin">Quero a versão</span>
+							<input
+								type="radio"
+								name="type"
+								value="digital"
+								checked="checked"
+							/><span className="radio_margin">Digital</span>
+							<input
+								type="radio"
+								name="type"
+								value="impressa"
+								disabled={this.state.price < p.minprice}
+							/><span className={this.state.price < p.minprice ? 'disabled' : 'notDisabled'}>Impressa</span>
 						</label>
 						{/* <button className="button">
 							+ carrinho
