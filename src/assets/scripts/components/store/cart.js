@@ -3,10 +3,19 @@ import PropTypes from 'prop-types';
 
 const Prod = (prod) => {
 	const p = prod.prod;
+	console.log(p);
 
 	const qtd = <p>me vê <span>{p.qtd}</span> zine{p.qtd === 1 ? '' : 's'}</p>;
 
-	const type = {};
+	let type = '';
+
+	if (p.qtd === 1) {
+		type = <p>{p.type}</p>;
+	} else if (p.type === 'impressa') {
+		type = <p>impressas</p>;
+	} else {
+		type = <p>digitais</p>;
+	}
 
 	let price = '';
 	if (p.price > 0) {

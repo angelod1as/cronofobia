@@ -16,12 +16,17 @@ export default class Product extends Component {
 			slug: p.slug,
 			price: 0,
 			qtd: 0,
+			type: 'digital',
 		});
 	}
 
 	handleChange(e) {
 		const { state } = this;
-		state[e.target.name] = parseFloat(e.target.value);
+		if (e.target.name === 'type') {
+			state[e.target.name] = e.target.value;
+		} else {
+			state[e.target.name] = parseFloat(e.target.value);
+		}
 		this.setState(state);
 		this.props.addToCart(state);
 	}
@@ -67,13 +72,15 @@ export default class Product extends Component {
 								type="radio"
 								name="type"
 								value="digital"
-								checked="checked"
+								defaultChecked
+								onChange={this.handleChange}
 							/><span className="radio_margin">Digital</span>
 							<input
 								type="radio"
 								name="type"
 								value="impressa"
 								disabled={this.state.price < p.minprice}
+								onChange={this.handleChange}
 							/><span className={this.state.price < p.minprice ? 'disabled' : 'notDisabled'}>Impressa</span>
 						</label>
 						{/* <button className="button">

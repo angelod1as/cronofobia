@@ -12,6 +12,7 @@ export default class App extends Component {
 		this.state = {
 			cart: {},
 			total: 0,
+			view: 'store',
 		};
 		this.addToCart = this.addToCart.bind(this);
 	}
@@ -27,6 +28,7 @@ export default class App extends Component {
 			obj.qtd === undefined;
 
 		cart[obj.slug] = obj;
+
 		// Remove se qtd estiver vazia
 		if (empty) {
 			delete cart[obj.slug];
