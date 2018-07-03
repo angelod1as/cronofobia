@@ -54,10 +54,14 @@
     "serve": "webpack-dev-server --color --hot --config ./webpack/webpack.config.dev.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "jsonp": "^0.2.1",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "utils": "git+ssh://git@gitlab.corp.folha.com.br:statics-arte/utils.git"
+    "react-spring": "^5.3.18",
+    "react-transition-group": "1.x",
+    "utils": "git+ssh://git@gitlab.corp.folha.com.br:statics-arte/utils.git",
+    "uuid": "^3.3.2"
   }
 }

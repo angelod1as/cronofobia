@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 const Prod = (prod) => {
 	const p = prod.prod;
-	console.log(p);
 
 	const qtd = <p>me vê <span>{p.qtd}</span> zine{p.qtd === 1 ? '' : 's'}</p>;
 
@@ -43,7 +42,12 @@ export default class Cart extends Component {
 					{Object.keys(cart).length > 0 ? Object.keys(cart).map(c => <Prod prod={cart[c]} key={cart[c].slug} />) : <div>carrinho vazio :(</div>}
 				</div>
 				<p className="cart_total">TOTAL: R$ {total}</p>
-				<button>Passar a régua</button>
+				<button
+					disabled={Object.keys(cart).length === 0}
+					className={Object.keys(cart).length === 0 ? 'disabled' : 'enabled'}
+					onClick={this.props.showReview}
+				>Passar a régua
+				</button>
 			</div>
 		);
 	}
@@ -51,4 +55,5 @@ export default class Cart extends Component {
 
 Cart.propTypes = {
 	state: PropTypes.object.isRequired,
+	showReview: PropTypes.func.isRequired,
 };

@@ -36,8 +36,8 @@ export default class Product extends Component {
 
 		return (
 			<div className={`product ${p.id}`} key={p.id}>
-				<img src={p.img} alt={`capa do zine "${p.title}"`} />
-				<div className="side">
+				{/* <img src={p.img} alt={`capa do zine "${p.title}"`} /> */}
+				<div className="prod_info">
 					<form className="form">
 						<h3 data-title={utils.slugfy(p.title)}>{p.title}</h3>
 						<p className="description">{p.desc}</p>

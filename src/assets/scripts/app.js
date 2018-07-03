@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Opening from './components/static/opening';
 import Store from './components/store/store';
 import Cart from './components/store/cart';
+import Review from './components/store/review';
 
 export default class App extends Component {
 	constructor(props) {
@@ -12,9 +13,10 @@ export default class App extends Component {
 		this.state = {
 			cart: {},
 			total: 0,
-			view: 'store',
+			view: false,
 		};
 		this.addToCart = this.addToCart.bind(this);
+		this.showReview = this.showReview.bind(this);
 	}
 
 	addToCart(obj) {
@@ -45,15 +47,30 @@ export default class App extends Component {
 		this.setState({ cart, total });
 	}
 
+	showReview() {
+		let { view } = this.state;
+		view = view === false;
+		this.setState({ view });
+	}
+
 	render() {
 		return (
 			<div className="main">
 				<div className="left">
 					<Opening />
 				</div>
-				<Store data={this.data} state={this.state} addToCart={this.addToCart} />
+				<div className="center">
+					<Review	state={this.state} />
+					{/* {this.state.view ? <Review	state={this.state} /> : ''} */}
+					<Store
+						data={this.data}
+						state={this.state}
+						addToCart={this.addToCart}
+						className={!this.state.view ? 'visible' : 'invisible'}
+					/>
+				</div>
 				<div className="right">
-					<Cart state={this.state} />
+					<Cart state={this.state} showReview={this.showReview} />
 				</div>
 			</div>
 		);
