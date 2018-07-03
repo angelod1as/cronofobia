@@ -13,6 +13,7 @@ const PATHS = {
 	build: path.resolve(__dirname, '../docs'),
 	src: path.resolve(__dirname, '../src'),
 	js: path.resolve(__dirname, '../src/assets/scripts'),
+	others: path.resolve(__dirname, '../src/assets/others'),
 };
 
 // `http://staging.arte.folha.com.br/${configPath}`
@@ -68,6 +69,11 @@ module.exports = {
 				to: 'json',
 				ignore: '.gitkeep',
 			},
+			{
+				from: path.join(PATHS.src, 'assets/others'),
+				to: 'others',
+				ignore: '.gitkeep',
+			},
 		]),
 	],
 	module: {
@@ -117,6 +123,17 @@ module.exports = {
 						loader: 'file-loader',
 						options: {
 							name: '../images/[name].[ext]',
+						},
+					},
+				],
+			},
+			{
+				test: /\.pdf$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: '../others/[name].[ext]',
 						},
 					},
 				],

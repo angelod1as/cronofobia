@@ -17,6 +17,7 @@ export default class Product extends Component {
 			price: 0,
 			qtd: 0,
 			type: 'digital',
+			url: p.url,
 		});
 	}
 

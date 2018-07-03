@@ -48,6 +48,7 @@ export default class App extends Component {
 	}
 
 	showReview() {
+		window.scrollTop = 0;
 		let { view } = this.state;
 		view = view === false;
 		this.setState({ view });
@@ -60,14 +61,17 @@ export default class App extends Component {
 					<Opening />
 				</div>
 				<div className="center">
-					<Review	state={this.state} />
-					{/* {this.state.view ? <Review	state={this.state} /> : ''} */}
-					<Store
-						data={this.data}
-						state={this.state}
-						addToCart={this.addToCart}
-						className={!this.state.view ? 'visible' : 'invisible'}
-					/>
+					{this.state.view ?
+						<Review
+							state={this.state}
+							showReview={this.showReview}
+						/> : ''}
+					{!this.state.view ?
+						<Store
+							data={this.data}
+							state={this.state}
+							addToCart={this.addToCart}
+						/> : ''}
 				</div>
 				<div className="right">
 					<Cart state={this.state} showReview={this.showReview} />

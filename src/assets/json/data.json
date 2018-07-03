@@ -9,7 +9,7 @@ data(
 			"img": "../../../images/nipple.jpg",
 			"minprice": 5,
 			"sug": 5,
-			"url": "url",
+			"url": "../others/nipplerings.pdf",
 			"qtd": 0,
 			"userprice": 0
 		},
@@ -21,7 +21,7 @@ data(
 			"img": "../../../images/orquestra.jpg",
 			"minprice": 5,
 			"sug": 5,
-			"url": "url",
+			"url": "../others/orquestra.pdf",
 			"qtd": 0,
 			"userprice": 0
 		},
@@ -33,7 +33,7 @@ data(
 			"img": "../../../images/lembrancas.jpg",
 			"minprice": 5,
 			"sug": 5,
-			"url": "url",
+			"url": "../others/lembrancas.pdf",
 			"qtd": 0,
 			"userprice": 0
 		},

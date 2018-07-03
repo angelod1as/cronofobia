@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import axios from 'axios';
 
 export default class Form extends Component {
@@ -23,6 +24,8 @@ export default class Form extends Component {
 		form.addEventListener('submit', (e) => {
 			e.preventDefault();
 			const data = formatter(form);
+			const cart = JSON.stringify(this.props.cart);
+			data.pedido = cart;
 			axios.get(origin, { params: data })
 				.then((response) => {
 					console.log(response); // eslint-disable-line no-console
@@ -44,8 +47,12 @@ export default class Form extends Component {
 				<input name="cep" type="text" placeholder="CEP" required />
 				<input name="cidade" type="text" placeholder="Cidade" required />
 				<input name="estado" type="text" placeholder="Estado" required />
-				<button type="submit">Send</button>
+				<button type="submit">Clique para enviar o endereço</button>
 			</form>
 		);
 	}
 }
+
+Form.propTypes = {
+	cart: PropTypes.object.isRequired,
+};

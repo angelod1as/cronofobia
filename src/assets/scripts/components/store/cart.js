@@ -46,7 +46,7 @@ export default class Cart extends Component {
 					disabled={Object.keys(cart).length === 0}
 					className={Object.keys(cart).length === 0 ? 'disabled' : 'enabled'}
 					onClick={this.props.showReview}
-				>Passar a régua
+				>{!this.props.state.view ? 'Passar a régua' : 'Voltar à loja'}
 				</button>
 			</div>
 		);

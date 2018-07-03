@@ -7,10 +7,11 @@ const uuidv1 = require('uuid/v1');
 const RevProd = (prod) => {
 	const p = prod.prod;
 	if (p.type === 'digital') {
+		console.log(p);
 		return [
 			<div key={uuidv1()} className="rev_item rev-title">{p.title}</div>,
 			<div key={uuidv1()} className="rev_item rev-price">R$ {p.price}</div>,
-			<button key={uuidv1()} className="rev_item rev-url" url={p.url}>Baixar</button>,
+			<a key={uuidv1()} className="rev_item rev-url" href={p.url} download>Baixar</a>,
 		];
 	}
 	// if impresso
@@ -55,14 +56,21 @@ export default class Review extends Component {
 	render() {
 		const { cart } = this.props.state;
 		const filtered = [[], []];
+		let pay = false;
 
 		if (Object.keys(cart).length > 0) {
+			// checa se há pagamento > boolean
+			pay = Object
+				.keys(cart)
+				.filter(key => cart[key].price > 0)
+				.length > 0;
+
 			// filtra digitais
 			const fDig = Object
 				.keys(cart)
 				.filter(key => cart[key].type === 'digital');
 
-				// filtra impressos
+			// filtra impressos
 			const fImp = Object
 				.keys(cart)
 				.filter(key => cart[key].type === 'impressa');
@@ -71,15 +79,25 @@ export default class Review extends Component {
 			filtered[1] = fImp;
 		}
 
+		const show = d => filtered[d].length > 0;
+
 		return (
 			<div className="review">
-				<h2>Fecha a conta, campeão</h2>
-				{filtered[0].length > 0 ? <p><small>(Você pode observar que é possível baixar os arquivos digitais antes mesmo de pagar. É isso mesmo, estou contando com sua consciência <span role="img" aria-label="Emoji piscando">😉</span>)</small></p> : ''}
-				{filtered[0].length > 0 ? <RevCart cart={cart} type="digitais" data={filtered[0]} key={uuidv1()} /> : ''}
-				{filtered[1].length > 0 ? <RevCart cart={cart} type="impressos" data={filtered[1]} key={uuidv1()} /> : ''}
-				<div className="pagto">
-					<h4>Pagamento</h4>
-					<Form />
+				<div className="rev_inner">
+					<h2>Fecha a conta, campeão</h2>
+					{show(0) ? <p><small>(Você pode observar que é possível baixar os arquivos digitais antes mesmo de pagar. É isso mesmo, estou contando com sua consciência <span role="img" aria-label="Emoji piscando">😉</span>)</small></p> : ''}
+					{show(0) ? <RevCart cart={cart} type="digitais" data={filtered[0]} key={uuidv1()} /> : ''}
+					{show(1) ? <RevCart cart={cart} type="impressos" data={filtered[1]} key={uuidv1()} /> : ''}
+					{show(1) ?
+						<div className="form">
+							<h4>Enviamos para onde?</h4>
+							<Form cart={cart} />
+						</div> : ''}
+					{pay ?
+						<div className="pagto">
+							<h4>Vamos ao que interessa?</h4>
+							<button className="pagto_btn">Bora pagar!</button>
+						</div> : ''}
 				</div>
 			</div>
 		);
@@ -89,4 +107,3 @@ export default class Review extends Component {
 Review.propTypes = {
 	state: PropTypes.object.isRequired,
 };
-
