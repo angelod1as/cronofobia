@@ -34,6 +34,7 @@ module.exports = {
 	plugins: [
 		new CleanWebpackPlugin(
 			['build'],
+			['docs'],
 			{
 				root: path.resolve(__dirname, '..'),
 				verbose: true,
