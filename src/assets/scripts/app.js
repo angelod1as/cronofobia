@@ -5,6 +5,7 @@ import Opening from './components/static/opening';
 import Store from './components/store/store';
 import Cart from './components/store/cart';
 import Review from './components/store/review';
+import About from './components/static/about';
 
 export default class App extends Component {
 	constructor(props) {
@@ -14,9 +15,11 @@ export default class App extends Component {
 			cart: {},
 			total: 0,
 			view: false,
+			about: false,
 		};
 		this.addToCart = this.addToCart.bind(this);
 		this.showReview = this.showReview.bind(this);
+		this.showAbout = this.showAbout.bind(this);
 	}
 
 	addToCart(obj) {
@@ -48,33 +51,49 @@ export default class App extends Component {
 	}
 
 	showReview() {
-		window.scrollTop = 0;
 		let { view } = this.state;
 		view = view === false;
 		this.setState({ view });
+	}
+
+	showAbout() {
+		let { about } = this.state;
+		about = about === false;
+		this.setState({ about });
 	}
 
 	render() {
 		return (
 			<div className="main">
 				<div className="left">
-					<Opening />
+					<Opening
+						showAbout={this.showAbout}
+						about={this.state.about}
+					/>
 				</div>
-				<div className="center">
-					{this.state.view ?
+				<div className={`center ${this.state.about ? 'center-about' : ''}`}>
+					{this.state.view && !this.state.about ?
 						<Review
 							state={this.state}
 							showReview={this.showReview}
 						/> : ''}
-					{!this.state.view ?
+					{!this.state.view && !this.state.about ?
 						<Store
 							data={this.data}
 							state={this.state}
 							addToCart={this.addToCart}
 						/> : ''}
+					{this.state.about ?
+						<About
+							data={this.data.about}
+						/> : ''}
 				</div>
 				<div className="right">
-					<Cart state={this.state} showReview={this.showReview} />
+					{!this.state.about ?
+						<Cart
+							state={this.state}
+							showReview={this.showReview}
+						/> : '' }
 				</div>
 			</div>
 		);

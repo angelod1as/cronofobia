@@ -6,7 +6,7 @@ html, body
 	grid-template-columns: 330px 1fr 330px
 	grid-column-gap: 50px
 
-	.opening, .store, .cart
+	.opening, .store, .cart, .about
 		margin: 30px 0
 		padding: 10px 30px
 		border 1px solid $black
@@ -14,3 +14,8 @@ html, body
 
 	.left, .right
 		width: 330px
+
+a
+	color: $black
+	&:hover
+		color: lighten($black, 50)

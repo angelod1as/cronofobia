@@ -38,6 +38,11 @@ $third = 620px
 			grid-area: center
 			width: auto
 			right: 0
+			&.center-about
+				grid-area: right
+				margin: 0
+				.about
+					margin: 0
 		.opening
 		.cart
 		.store
@@ -52,7 +57,7 @@ $third = 620px
 	+below($third)
 		display: flex
 		flex-direction: column
-		margin: 0 10px
+		margin: 0 10px 20px 0
 		.left
 		.right
 		.center

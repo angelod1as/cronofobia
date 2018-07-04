@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import Mailchimp from './mailchimp';
 
 export default class Opening extends Component {
@@ -8,10 +10,16 @@ export default class Opening extends Component {
 				<div className="intro">
 					<h1>CRONOFOBIA</h1>
 					<p className="lead">Newsletter, zines e distrações</p>
+					<button onClick={this.props.showAbout}>{this.props.about ? 'Voltar à loja' : 'Sobre'}</button>
 					{/* <img src="https://media.giphy.com/media/l0MYOUI5XfRk4LLWM/giphy.gif" alt="" /> */}
 				</div>
-				<Mailchimp />
+				{this.props.about ? '' : <Mailchimp />}
 			</div>
 		);
 	}
 }
+
+Opening.propTypes = {
+	showAbout: PropTypes.func.isRequired,
+	about: PropTypes.bool.isRequired,
+};

@@ -43,6 +43,7 @@ export default class Product extends Component {
 						<h3 data-title={utils.slugfy(p.title)}>{p.title}</h3>
 						<p className="description">{p.desc}</p>
 						<p className="suggested">valor sugerido: R$ {p.sug}</p>
+						<p className="suggested">mínimo para impresso: R$ {p.minprice}</p>
 						{/* FORM */}
 						<label htmlFor="qtd">
 							Quero <input
