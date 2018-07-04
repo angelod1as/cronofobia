@@ -19,6 +19,10 @@ export default class About extends Component {
 				<p>Meu nome é <em>Angelo Dias</em>. Sou criador e editor-chefe do jornal satírico de ficção científica <a href="http://www.temposfantasticos.com" target="_blank" rel="noopener noreferrer">Tempos Fantásticos</a>, roteirista do quadrinho Combo Breaker (ainda sem site) e participador de projetos alheios.</p>
 				<p>De dia, sou desenvolvedor front-end na Folha de S.Paulo, fazendo altos sites mutcholocos (tipo esse). <a href="http://www.angelodias.com.br" target="_blank" rel="noopener noreferrer">Conheça meu trabalho aqui</a>.</p>
 				<p>Tem perguntas sobre o projeto e não quer ser identificado? <a href="http://www.curiouscat.me/cronofobico" target="_blank" rel="noopener noreferrer">Mande aqui anonimamente</a>.</p>
+				<h3>Colophon</h3>
+				<p>Esse site foi desenhado e desenvolvido completamente por Angelo Dias no Visual Studio Code.</p>
+				<p>Ele foi escrito em React. O HTML que não é JSX foi feito em Pug. O CSS é Stylus do começo ao fim. Um belo boilerplate com webpack fez sua magia e cuspiu o que você vê na sua tela agora.</p>
+				<p>Agradeço Pilker, Rubens Fernandes, Thiago Almeida e Lucas Golino pelo boilerplate, feedbacks e (principalmente) pela enorme paciência.</p>
 			</div>
 		);
 	}
