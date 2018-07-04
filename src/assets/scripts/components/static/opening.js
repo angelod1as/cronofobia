@@ -8,8 +8,7 @@ export default class Opening extends Component {
 				<div className="intro">
 					<h1>CRONOFOBIA</h1>
 					<p className="lead">Newsletter, zines e distrações</p>
-					{/* IFRAME */}
-					<img src="https://media.giphy.com/media/l0MYOUI5XfRk4LLWM/giphy.gif" alt="" />
+					{/* <img src="https://media.giphy.com/media/l0MYOUI5XfRk4LLWM/giphy.gif" alt="" /> */}
 				</div>
 				<Mailchimp />
 			</div>

@@ -37,7 +37,7 @@ export default class Cart extends Component {
 		return (
 			<div className="cart">
 				<h2>Carrinho</h2>
-				<p>O carrinho é atualizado automaticamente, basta preencher os campos ao lado</p>
+				<p>O carrinho é atualizado automaticamente, basta preencher os campos nos produtos</p>
 				<div className="cart_table">
 					{Object.keys(cart).length > 0 ? Object.keys(cart).map(c => <Prod prod={cart[c]} key={cart[c].slug} />) : <div>carrinho vazio :(</div>}
 				</div>
