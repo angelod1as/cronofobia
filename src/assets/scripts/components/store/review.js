@@ -7,7 +7,6 @@ const uuidv1 = require('uuid/v1');
 const RevProd = (prod) => {
 	const p = prod.prod;
 	if (p.type === 'digital') {
-		console.log(p);
 		return [
 			<div key={uuidv1()} className="rev_item rev-title">{p.title}</div>,
 			<div key={uuidv1()} className="rev_item rev-price">R$ {p.price}</div>,
@@ -88,15 +87,9 @@ export default class Review extends Component {
 					{show(0) ? <p><small>(Você pode observar que é possível baixar os arquivos digitais antes mesmo de pagar. É isso mesmo, estou contando com sua consciência <span role="img" aria-label="Emoji piscando">😉</span>)</small></p> : ''}
 					{show(0) ? <RevCart cart={cart} type="digitais" data={filtered[0]} key={uuidv1()} /> : ''}
 					{show(1) ? <RevCart cart={cart} type="impressos" data={filtered[1]} key={uuidv1()} /> : ''}
-					{show(1) ?
-						<div className="form">
-							<h4>Enviamos para onde?</h4>
-							<Form cart={cart} />
-						</div> : ''}
 					{pay ?
-						<div className="pagto">
-							<h4>Vamos ao que interessa?</h4>
-							<button className="pagto_btn">Bora pagar!</button>
+						<div className="form">
+							<Form cart={cart} sendToPay={this.props.sendToPay} />
 						</div> : ''}
 				</div>
 			</div>
@@ -106,4 +99,5 @@ export default class Review extends Component {
 
 Review.propTypes = {
 	state: PropTypes.object.isRequired,
+	sendToPay: PropTypes.func.isRequired,
 };

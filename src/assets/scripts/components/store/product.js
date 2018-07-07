@@ -18,6 +18,7 @@ export default class Product extends Component {
 			qtd: 0,
 			type: 'digital',
 			url: p.url,
+			id: p.id,
 		});
 	}
 

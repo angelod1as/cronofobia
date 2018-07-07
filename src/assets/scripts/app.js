@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 
 import Opening from './components/static/opening';
 import Store from './components/store/store';
 import Cart from './components/store/cart';
 import Review from './components/store/review';
 import About from './components/static/about';
+
+const localSplit = window.location.href.split('?');
+const queryStr = localSplit.length > 1 ? localSplit[1] : '';
 
 export default class App extends Component {
 	constructor(props) {
@@ -16,10 +20,20 @@ export default class App extends Component {
 			total: 0,
 			view: false,
 			about: false,
+			query: queryStr,
 		};
 		this.addToCart = this.addToCart.bind(this);
 		this.showReview = this.showReview.bind(this);
 		this.showAbout = this.showAbout.bind(this);
+		this.sendToPay = this.sendToPay.bind(this);
+	}
+
+	componentWillMount() {
+		if (this.state.query !== '') {
+			let { about } = this.state;
+			about = true;
+			this.setState({ about });
+		}
 	}
 
 	addToCart(obj) {
@@ -33,12 +47,10 @@ export default class App extends Component {
 			obj.qtd === undefined;
 
 		cart[obj.slug] = obj;
-
 		// Remove se qtd estiver vazia
 		if (empty) {
 			delete cart[obj.slug];
 		}
-
 		// THEN, TOTAL
 		if (Object.keys(cart).length > 0) {
 			Object.keys(cart).map((c) => {
@@ -46,7 +58,6 @@ export default class App extends Component {
 				return null;
 			});
 		}
-
 		this.setState({ cart, total });
 	}
 
@@ -58,8 +69,37 @@ export default class App extends Component {
 
 	showAbout() {
 		let { about } = this.state;
-		about = about === false;
+		const { query } = this.state;
+		if (query !== '') {
+			about = true;
+		} else {
+			about = about === false;
+		}
 		this.setState({ about });
+	}
+
+	sendToPay(info) {
+		// const myServer = 'http://backend-cronofobia-com.umbler.net/api/payment';
+		const myServer = 'http://0.0.0.0:3000/api/payment';
+
+		axios.post(myServer, { data: info })
+			.then((response) => {
+				const { data } = response;
+				if (data.status === 'error') {
+					return console.log('error'); // eslint-disable-line
+				}
+				console.log('success'); // eslint-disable-line
+				const anchor = document.createElement('a');
+				document.body.appendChild(anchor);
+				anchor.setAttribute('href', `https://pagseguro.uol.com.br/v2/checkout/payment.html?code=${data.code}`);
+				anchor.setAttribute('target', '_blank');
+				anchor.setAttribute('style', 'display: none');
+				// anchor.click();
+				return null;
+			})
+			.catch((error) => {
+				console.log(error); // eslint-disable-line
+			});
 	}
 
 	render() {
@@ -69,6 +109,7 @@ export default class App extends Component {
 					<Opening
 						showAbout={this.showAbout}
 						about={this.state.about}
+						query={this.state.query}
 					/>
 				</div>
 				<div className={`center ${this.state.about ? 'center-about' : ''}`}>
@@ -76,6 +117,7 @@ export default class App extends Component {
 						<Review
 							state={this.state}
 							showReview={this.showReview}
+							sendToPay={this.sendToPay}
 						/> : ''}
 					{!this.state.view && !this.state.about ?
 						<Store
@@ -86,6 +128,7 @@ export default class App extends Component {
 					{this.state.about ?
 						<About
 							data={this.data.about}
+							query={this.state.query}
 						/> : ''}
 				</div>
 				<div className="right">

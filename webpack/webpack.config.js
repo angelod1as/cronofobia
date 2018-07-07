@@ -14,7 +14,7 @@ const PATHS = {
 module.exports = {
 	mode: 'development',
 	devServer: {
-		port: 3000,
+		port: 3001,
 		hot: true,
 		inline: true,
 		open: true,

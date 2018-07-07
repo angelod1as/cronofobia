@@ -36,18 +36,20 @@ export default class Cart extends Component {
 
 		return (
 			<div className="cart">
-				<h2>Carrinho</h2>
-				<p>O carrinho é atualizado automaticamente, basta preencher os campos nos produtos</p>
-				<div className="cart_table">
-					{Object.keys(cart).length > 0 ? Object.keys(cart).map(c => <Prod prod={cart[c]} key={cart[c].slug} />) : <div>carrinho vazio :(</div>}
+				<div className="cart-inner">
+					<h2>Carrinho</h2>
+					<p>O carrinho é atualizado automaticamente, basta preencher os campos nos produtos</p>
+					<div className="cart_table">
+						{Object.keys(cart).length > 0 ? Object.keys(cart).map(c => <Prod prod={cart[c]} key={cart[c].slug} />) : <div>carrinho vazio :(</div>}
+					</div>
+					<p className="cart_total">TOTAL: R$ {total}</p>
+					<button
+						disabled={Object.keys(cart).length === 0}
+						className={Object.keys(cart).length === 0 ? 'disabled' : 'enabled'}
+						onClick={this.props.showReview}
+					>{!this.props.state.view ? 'Passar a régua' : 'Voltar à loja'}
+					</button>
 				</div>
-				<p className="cart_total">TOTAL: R$ {total}</p>
-				<button
-					disabled={Object.keys(cart).length === 0}
-					className={Object.keys(cart).length === 0 ? 'disabled' : 'enabled'}
-					onClick={this.props.showReview}
-				>{!this.props.state.view ? 'Passar a régua' : 'Voltar à loja'}
-				</button>
 			</div>
 		);
 	}

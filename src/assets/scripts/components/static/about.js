@@ -1,11 +1,26 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
-const uuidv1 = require('uuid/v1');
+import Mailchimp from './mailchimp';
 
 export default class About extends Component {
 	render() {
 		const about = this.props.data[0];
+		// OBRIGADO POR COMPRAR
+		if (this.props.query === 'compra') {
+			return (
+				<div className="about">
+					<h2>Obrigado!</h2>
+					<p>São pessoas como você que fazem esse mundinho da publicação independente crescer.</p>
+					<p>MUITO OBRIGADO.</p>
+					<p><em>MESMO.</em></p>
+					<p>Toma aí um GIF de agradecimento.</p>
+					<img src="https://media.giphy.com/media/o3JilXQkQegko/giphy.gif" alt="" />
+					<p>(o que acha de aproveitar e assinar nossa newsletter abaixo?</p>
+					<Mailchimp />
+				</div>
+			);
+		}
+		// ABOUT
 		return (
 			<div className="about">
 				<h2>{about.title}</h2>
@@ -30,4 +45,5 @@ export default class About extends Component {
 
 About.propTypes = {
 	data: PropTypes.array.isRequired,
+	query: PropTypes.string.isRequired,
 };
