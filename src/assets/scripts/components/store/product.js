@@ -19,6 +19,7 @@ export default class Product extends Component {
 			type: 'digital',
 			url: p.url,
 			id: p.id,
+			spec: p.spec,
 		});
 	}
 
@@ -43,8 +44,9 @@ export default class Product extends Component {
 					<form className="form">
 						<h3 data-title={utils.slugfy(p.title)}>{p.title}</h3>
 						<p className="description">{p.desc}</p>
+						<p className="spec">{p.spec}</p>
 						<p className="suggested">valor sugerido: R$ {p.sug}</p>
-						<p className="suggested">mínimo para impresso: R$ {p.minprice}</p>
+						<p className="minimum">mínimo para impresso: R$ {p.minprice}</p>
 						{/* FORM */}
 						<label htmlFor="qtd">
 							Quero <input
@@ -55,7 +57,7 @@ export default class Product extends Component {
 								type="number"
 								min="0"
 								onChange={this.handleChange}
-							/> zine{this.state.qtd === 1 ? '' : 's'}
+							/> zine{this.state.qtd === 1 ? '' : 's'}.
 						</label>
 						<label htmlFor="price">
 							Vou pagar
@@ -67,24 +69,24 @@ export default class Product extends Component {
 								type="number"
 								min="0"
 								onChange={this.handleChange}
-							/> (cada)
+							/> em cada.
 						</label>
 						<label htmlFor="type" className="radio">
 							<span className="radio_margin">Quero a versão</span>
-							<input
+							<br /><input
 								type="radio"
 								name="type"
 								value="digital"
 								defaultChecked
 								onChange={this.handleChange}
 							/><span className="radio_margin">Digital</span>
-							<input
+							<br /><input
 								type="radio"
 								name="type"
 								value="impressa"
 								disabled={this.state.price < p.minprice}
 								onChange={this.handleChange}
-							/><span className={this.state.price < p.minprice ? 'disabled' : 'notDisabled'}>Impressa</span>
+							/><span className={`${this.state.price < p.minprice ? 'disabled' : 'notDisabled'} radio-margin`}>Impressa</span>
 						</label>
 						{/* <button className="button">
 							+ carrinho
