@@ -23,7 +23,9 @@ export default class About extends Component {
 		// ABOUT
 		return (
 			<div className="about">
-				<h2>{about.title}</h2>
+				<h2>Contato</h2>
+				<p>Envie um email para oicronofobia[arroba]gmail.com</p>
+				<h2>Sobre</h2>
 				<p>Queria saber descrever esse projeto como o pessoal das artes faz, sabe, cheios de pompa e elegância?</p>
 				<p><i>{'"'}Cronofobia é a expressão gutural de sentimentos aprisionados transformados com leveza em impressos monocromáticos pelo multiartista Angelo Dias.{'"'}</i></p>
 				<p>Como não tenho essa capacidade, vaia assim mesmo: o projeto <em>Cronofobia</em> surgiu para expressar pensamentos e vivências. É um trabalho autoral, feito em casa, impresso em xerox e grampeado manualmente.</p>
@@ -37,7 +39,7 @@ export default class About extends Component {
 				<h3>Colophon</h3>
 				<p>Esse site foi desenhado e desenvolvido completamente por Angelo Dias no Visual Studio Code.</p>
 				<p>Ele foi escrito em React. O HTML que não é JSX foi feito em Pug. O CSS é Stylus do começo ao fim. Um belo boilerplate com webpack fez sua magia e cuspiu o que você vê na sua tela agora.</p>
-				<p>Agradeço Pilker, Rubens Fernandes, Thiago Almeida e Lucas Golino pelo boilerplate, feedbacks e (principalmente) pela enorme paciência.</p>
+				<p>Agradeço Pilker, Rubens Fernandes, Thiago Almeida e Lucas Golino pelo boilerplate, feedbacks e (principalmente) pela enorme paciência. Agradeço especialmente a Lucas Golino pela implementação do back-end.</p>
 			</div>
 		);
 	}
