@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export default class Form extends Component {
+	constructor() {
+		super();
+		this.state = { hasClicked: false };
+		this.changeClick = this.changeClick.bind(this);
+	}
+
 	componentDidMount() {
 		const form = document.forms['submit-to-google-sheet'];
 
@@ -21,12 +27,21 @@ export default class Form extends Component {
 
 		form.addEventListener('submit', (e) => {
 			e.preventDefault();
+			// muda texto do clique
+			// formata os dados e envia
 			const data = formatter(form);
 			const cart = JSON.stringify(this.props.cart);
 			data.pedido = cart;
 			this.props.sendToPay(data);
 		});
 	}
+
+	changeClick() {
+		let { hasClicked } = this.state;
+		hasClicked = hasClicked === false;
+		this.setState({ hasClicked });
+	}
+
 	render() {
 		return (
 			<form className="pedido" name="submit-to-google-sheet">
@@ -39,7 +54,10 @@ export default class Form extends Component {
 				<input name="cep" type="text" placeholder="CEP" />
 				<input name="cidade" type="text" placeholder="Cidade" />
 				<input name="estado" type="text" placeholder="Estado" /> */}
-				<button type="submit"><span role="img" aria-label="money bag emoji">💰</span> Clique para pagar <span role="img" aria-label="money bag emoji">💰</span></button>
+				{this.state.hasClicked ?
+					<button type="submit" onClick={this.changeClick}><span role="img" aria-label="finger poiting up emoji">☝️</span> Só aguardar (e liberar o popup lá em cima)! <span role="img" aria-label="finger poiting up emoji">☝️</span></button> :
+					<button type="submit" onClick={this.changeClick}><span role="img" aria-label="money bag emoji">💰</span> Clique para pagar <span role="img" aria-label="money bag emoji">💰</span></button>
+				}
 			</form>
 		);
 	}
