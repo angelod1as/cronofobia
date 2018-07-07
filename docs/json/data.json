@@ -1,0 +1,48 @@
+data(
+{
+	"produtos": [
+		{
+			"id": 1,
+			"title": "Nipple Rings",
+			"slug": "nipple-rings",
+			"desc": "De repente, em um encontro, devaneios sobre penduricalhos mamílicos. Um relato de um date que ficou na minha cabeça. Exemplos de como desenho mal.",
+			"img": "../../../images/nipple.jpg",
+			"minprice": 5,
+			"sug": 5,
+			"url": "../others/nipplerings.pdf",
+			"qtd": 0,
+			"userprice": 0
+		},
+		{
+			"id": 2,
+			"title": "Orquestra Vermelha",
+			"slug": "orquestra-vermelha",
+			"desc": "Relatos e pensamentos sobre um show da banda Orquestra Vermelha, de Matheus Leston. O que é uma banda? O que é música eletrônica? Um músico não presente é músico? Entre outras questões.",
+			"img": "../../../images/orquestra.jpg",
+			"minprice": 5,
+			"sug": 5,
+			"url": "../others/orquestra.pdf",
+			"qtd": 0,
+			"userprice": 0
+		},
+		{
+			"id": 3,
+			"title": "As lembranças que os objetos trazem",
+			"slug": "as-lembranças-que-os-objetos-trazem",
+			"desc": "Você já parou para pensar que, após sua morte, qualquer história que uma pessoa contar sobre você se torna automaticamente verdade? Quais as histórias que seus objetos contarão?",
+			"img": "../../../images/lembrancas.jpg",
+			"minprice": 5,
+			"sug": 5,
+			"url": "../others/lembrancas.pdf",
+			"qtd": 0,
+			"userprice": 0
+		},
+	],
+	"about": [
+		{
+			"title": "Sobre",
+			"text": "<p>Queria saber descrever esse projeto como o pessoal das artes faz, sabe, cheios de pompa e elegância?<\/p><p>\"Cronofobia é a expressão gutural de sentimentos aprisionados transformados com leveza em impressos monocromáticos pelo multiartista Angelo Dias\".<\/p><p>(Que descrição mais troxa, meu Deus)<\/p><p>O projeto <em>Cronofobia<\/em> surgiu como uma forma de expressão de pensamentos e vivências que venho tendo. É um trabalho autoral, feito em casa, impresso em xerox e grampeado manualmente.<\/p><p>A ideia é ter algumas zines aleatórias que contam histórias e fazem alguns questionamentos (se pá). Haverá uma série numerada que trata do nome do projeto (cronofobia, o medo do tempo passar).<\/p><p>No fim das contas, é uma desculpa para produzir fora do que estou acostumado e fugir um pouco da ficção fantástica/científica. E é você quem financia essa merda.<\/p><p>Pfv financie, é daora.<\/p><p>Meu nome é <em>Angelo Dias<\/em>. Sou criador e editor-chefe do jornal satírico de ficção científica <a href=\"www.temposfantasticos.com\" target=\"_blank\"><em>Tempos Fantásticos<\/em><\/a>, roteirista do quadrinho Combo Breaker (ainda sem site) e participador de projetos alheios.<\/p><p>De dia, sou desenvolvedor front-end na Folha de S.Paulo, fazendo altos sites mutcholocos (tipo esse). <a href=\"www.angelodias.com.br\" target=\"_blank\">Conheça meu trabalho aqui<\/a>.<\/p><p>Tem perguntas sobre o projeto e não quer ser identificado? <a href=\"www.curiouscat.me/cronofobico\" target=\"_blank\">Mande aqui anonimamente<\/a>.<\/p>"
+		}
+	]
+}
+)

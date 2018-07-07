@@ -1,0 +1,71 @@
+$first = 1200px
+$second = 920px
+$third = 620px
+
+.main
+	// FIRST only smaller
+	+below($first)
+		grid-template-columns: 250px 1fr 250px
+		em
+			font-size: 1.1em
+		h1
+			font-size: 2.3em
+		h2
+			font-size: 1.5em
+		h3
+			font-size: 1em
+		p
+			font-size: 1.1em
+		.opening
+		.left
+		.right
+		.cart
+			width: 250px
+	// SECOND grid-areas
+	+below($second)
+		margin: 20px
+		grid-template-columns: 1fr 1fr
+		grid-gap: 20px
+		grid-template-areas: "left right"\
+			"center center"
+		.left
+			grid-area: left
+			width: auto
+		.right
+			grid-area: right
+			width: auto
+		.center
+			grid-area: center
+			width: auto
+			right: 0
+			&.center-about
+				grid-area: right
+				margin: 0
+				.about
+					margin: 0
+		.opening
+		.cart
+		.store
+			position relative
+			width: auto
+			left: 0
+			right: 0
+			margin: 0
+		.review
+			margin: 0
+	// THIRD blocky
+	+below($third)
+		display: flex
+		flex-direction: column
+		margin: 0 10px 20px 10px
+		.left
+		.right
+		.center
+			margin: 10px 0
+		.left
+			order: 1
+		.right
+			order: 2
+		.center
+			order: 3
+

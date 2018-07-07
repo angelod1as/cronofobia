@@ -1,0 +1,65 @@
+{
+  "env": {
+    "browser": true,
+    "jasmine": true
+  },
+  "extends": "airbnb",
+  "rules": {
+    "indent": [
+      2,
+      "tab"
+    ],
+    "no-unused-vars": 1,
+    "no-tabs": 0,
+    "react/jsx-indent": [
+      2,
+      "tab"
+    ],
+    "react/jsx-indent-props": [
+      2,
+      "tab"
+		],
+		"react/no-unused-state": [0],
+    "react/prefer-stateless-function": [
+      0,
+      {
+        "ignorePureComponents": false
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "import/no-named-as-default": false,
+    "jsx-a11y/anchor-is-valid": [
+      1,
+      {
+        "components": [
+          "a"
+        ],
+        "aspects": [
+          "noHref",
+          "invalidHref",
+          "preferButton"
+        ]
+      }
+    ],
+    "react/forbid-prop-types": [
+      1,
+      {
+        "forbid": [
+          "class"
+        ]
+      }
+		],
+		"max-len": 0,
+		"class-methods-use-this": 0,
+		"react/require-default-props": 0,
+		"no-debugger": 1
+  }
+}

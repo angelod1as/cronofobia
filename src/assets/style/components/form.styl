@@ -1,0 +1,98 @@
+btn-black()
+	background-color: $black
+	border: 1px solid $black
+	color: $white
+	&:hover
+		background-color: $white
+		color: $black
+	&.disabled,
+	&:disabled
+		color: $white
+		background-color: $black
+		border: 1px solid $black
+		cursor: not-allowed
+		opacity: .5
+		&:hover
+			background-color: $black
+			color: $white
+			opacity: .3
+
+btn-white()
+	background-color: $white
+	border: 1px solid $white
+	color: $black
+	&:hover
+		background-color: $black
+		color: $white
+	&.disabled,
+	&:disabled
+		color: $white
+		background-color: $black
+		border: 1px solid $black
+		cursor: not-allowed
+		opacity: .5
+		&:hover
+			background-color: $black
+			color: $white
+			opacity: .3
+
+a-btn()
+	display: block
+	text-align: center
+	width: 80px
+	border-radius: 5px
+	margin: 0
+	padding: 5px
+	font-size: 1em
+	font-family: $font
+	cursor: pointer
+	transition: .1s
+	line-height: 1em
+	text-decoration: none
+	font-weight: 400;
+
+form
+	input
+		display: block
+		color: $black
+		background-color: $white
+		border: 1px solid $black
+		border-radius: 5px
+		margin: 10px 0
+		padding: 10px
+		font-size: 1em
+		font-family: $font
+		width: 100%
+		&.birthday
+			display: inline-block
+			margin: 0
+			width: 50px
+		&[type="submit"]
+			margin: 0 !important
+
+button,
+input[type="submit"]
+	display: block
+	text-align: center
+	width: 120px
+	border-radius: 5px
+	margin: 20px 0
+	padding: 10px
+	font-size: 1em
+	font-family: $font
+	cursor: pointer
+	transition: .1s
+	btn-black()
+
+
+input[type="radio"]
+	&:disabled
+		cursor: not-allowed
+
+label
+	.disabled
+		opacity: .5
+		cursor: not-allowed
+
+.oldnews
+	font-size: 0.8em

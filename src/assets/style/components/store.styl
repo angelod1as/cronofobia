@@ -1,0 +1,40 @@
+.store
+	.products
+		margin-top: 50px
+		display: grid
+		grid-template-columns: repeat( auto-fit, minmax(200px, 1fr))
+		grid-gap: 50px
+		img
+			width: 100%
+			// border: 1px solid $black
+			// border-radius: 5px
+			box-shadow: 2px 2px 10px rgba(0, 0, 0, .2)
+		.prod_info
+			margin-top: 20px
+
+		h3, p, label, input // RMV MARGIN GERAL
+			margin: 0
+
+		.suggested
+		.minimum
+			margin: 10px 0
+			font-weight: $bold
+			font-size: .9em
+		.spec
+			margin: 10px 0
+			font-size: .9em
+		label
+			display block
+			margin: 10px 0
+		input
+			display inline-block
+			width: 50px
+			padding: 5px
+		.radio
+			input
+				margin: 2px 5px 0 5px
+				width: 18px
+				display: inline-block
+				vertical-align: text-top
+			.radio_margin
+				margin-right: 10px

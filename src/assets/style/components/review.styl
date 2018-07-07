@@ -1,0 +1,65 @@
+.review
+	margin-top: 30px
+	padding: 10px 30px
+	border 1px solid $black
+	background-color: $black
+	color: $white
+	border-radius: 5px
+	margin-bottom: 30px
+	h2
+		font-size: 2em
+	h4
+		font-style: italic
+		font-size: 1.3em
+		margin-bottom: 10px
+	.grid
+		display grid
+		grid-template-columns 3fr 1fr 1fr
+		.grid_header
+			font-weight $bold
+			margin-bottom 5px
+		.rev_item
+			margin-bottom 5px
+	.pagto_btn
+		btn-white()
+	a.rev-url
+		margin 0
+		padding 0
+		a-btn()
+		btn-white()
+
+form.pedido
+	display: grid
+	grid-gap: 5px
+	grid-template-areas:
+		"nome nome nome email"\
+		"rua rua rua numero"\
+		"complemento bairro bairro cep"\
+		"cidade cidade cidade estado"\
+		"button button button button"
+	input
+		margin: 0
+	input[name="nome"]
+		grid-area: nome
+	input[name="email"]
+		grid-area: email
+	input[name="rua"]
+		grid-area: rua
+	input[name="numero"]
+		grid-area: numero
+	input[name="complemento"]
+		grid-area: complemento
+	input[name="bairro"]
+		grid-area: bairro
+	input[name="cep"]
+		grid-area: cep
+	input[name="cidade"]
+		grid-area: cidade
+	input[name="estado"]
+		grid-area: estado
+	button
+		grid-area: button
+		btn-white()
+		width: 100%
+		margin-top: 20px
+

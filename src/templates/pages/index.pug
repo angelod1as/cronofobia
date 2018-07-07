@@ -1,0 +1,14 @@
+extend ../layouts/special
+
+append variables
+	- var title= '';
+	- var lead= '';
+	- var description= '';
+	- var url= '';
+	- var share_title= title + '-' + section;
+	- var share_type= 'article';
+	- var share_image= url + 'images/social.jpg';
+	- var share_description= description || lead;
+
+block content
+	#app

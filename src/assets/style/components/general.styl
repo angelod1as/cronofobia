@@ -1,0 +1,21 @@
+html, body
+	height: 100%
+
+.main
+	display: grid
+	grid-template-columns: 280px 1fr 280px
+	grid-column-gap: 50px
+
+	.opening, .store, .about
+		margin: 30px 0
+		padding: 10px 30px
+		border 1px solid $black
+		border-radius: 5px
+
+	.left, .right
+		width: 280px
+
+a
+	color: $black
+	&:hover
+		color: lighten($black, 50)
