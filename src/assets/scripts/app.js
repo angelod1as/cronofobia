@@ -21,11 +21,13 @@ export default class App extends Component {
 			view: false,
 			about: false,
 			query: queryStr,
+			before: {},
 		};
 		this.addToCart = this.addToCart.bind(this);
 		this.showReview = this.showReview.bind(this);
 		this.showAbout = this.showAbout.bind(this);
 		this.sendToPay = this.sendToPay.bind(this);
+		this.beforeProd = this.beforeProd.bind(this);
 	}
 
 	componentWillMount() {
@@ -34,6 +36,16 @@ export default class App extends Component {
 			about = true;
 			this.setState({ about });
 		}
+	}
+
+	beforeProd(p) {
+		const { state } = this;
+		state.before[p.slug] = {
+			qtd: p.qtd,
+			price: p.price,
+			type: p.type,
+		};
+		this.setState({ state });
 	}
 
 	addToCart(obj) {
@@ -79,8 +91,8 @@ export default class App extends Component {
 	}
 
 	sendToPay(info) {
-		// const myServer = 'http://backend-cronofobia-com.umbler.net/api/payment';
-		const myServer = 'http://0.0.0.0:3000/api/payment';
+		const myServer = 'http://backend-cronofobia-com.umbler.net/api/payment';
+		// const myServer = 'http://0.0.0.0:3000/api/payment';
 
 		axios.post(myServer, { data: info })
 			.then((response) => {
@@ -94,7 +106,7 @@ export default class App extends Component {
 				anchor.setAttribute('href', `https://pagseguro.uol.com.br/v2/checkout/payment.html?code=${data.code}`);
 				anchor.setAttribute('target', '_blank');
 				anchor.setAttribute('style', 'display: none');
-				// anchor.click();
+				anchor.click();
 				return null;
 			})
 			.catch((error) => {
@@ -124,6 +136,7 @@ export default class App extends Component {
 							data={this.data}
 							state={this.state}
 							addToCart={this.addToCart}
+							beforeProd={this.beforeProd}
 						/> : ''}
 					{this.state.about ?
 						<About

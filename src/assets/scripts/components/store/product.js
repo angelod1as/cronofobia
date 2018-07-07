@@ -10,17 +10,32 @@ export default class Product extends Component {
 	}
 
 	componentWillMount() {
+		let before = {};
 		const p = this.props.prod;
+		if (Object.keys(this.props.state.before).length > 0) {
+			({ before } = this.props.state);
+		} else {
+			before[p.slug] = {
+				price: 0,
+				qtd: 0,
+				type: 'digital',
+			};
+		}
+		const b = before[p.slug];
 		this.setState({
 			title: p.title,
 			slug: p.slug,
-			price: 0,
-			qtd: 0,
-			type: 'digital',
+			price: b.price,
+			qtd: b.qtd,
+			type: b.type,
 			url: p.url,
 			id: p.id,
 			spec: p.spec,
 		});
+	}
+
+	componentWillUnmount() {
+		this.props.beforeProd(this.state);
 	}
 
 	handleChange(e) {
@@ -56,6 +71,7 @@ export default class Product extends Component {
 								className="form_qtd"
 								type="number"
 								min="0"
+								value={this.state.qtd}
 								onChange={this.handleChange}
 							/> zine{this.state.qtd === 1 ? '' : 's'}.
 						</label>
@@ -68,6 +84,7 @@ export default class Product extends Component {
 								className="form_price"
 								type="number"
 								min="0"
+								value={this.state.price}
 								onChange={this.handleChange}
 							/> em cada.
 						</label>
@@ -77,7 +94,7 @@ export default class Product extends Component {
 								type="radio"
 								name="type"
 								value="digital"
-								defaultChecked
+								defaultChecked={this.state.type === 'digital'}
 								onChange={this.handleChange}
 							/><span className="radio_margin">Digital</span>
 							<br /><input
@@ -85,6 +102,7 @@ export default class Product extends Component {
 								name="type"
 								value="impressa"
 								disabled={this.state.price < p.minprice}
+								defaultChecked={this.state.type === 'impressa'}
 								onChange={this.handleChange}
 							/><span className={`${this.state.price < p.minprice ? 'disabled' : 'notDisabled'} radio-margin`}>Impressa</span>
 						</label>
@@ -101,4 +119,6 @@ export default class Product extends Component {
 Product.propTypes = {
 	prod: PropTypes.object.isRequired,
 	addToCart: PropTypes.func,
+	beforeProd: PropTypes.func,
+	state: PropTypes.object,
 };

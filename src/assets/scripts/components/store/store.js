@@ -12,7 +12,14 @@ export default class Store extends Component {
 				<p>A loja funciona no regime <em>pague quanto quiser</em>.</p>
 				<p>Os produtos digitais estão disponíveis a partir de <em>zero reais</em>, enquanto os impressos têm um <em>valor mínimo</em> (impressão e postagem). Cada produto também tem um <em>valor sugerido</em>.</p>
 				<div className="products">
-					{produtos.map(e => <Product prod={e} key={e.id} addToCart={this.props.addToCart} state={this.props.state} />)}
+					{produtos.map(e =>
+						(<Product
+							prod={e}
+							key={e.id}
+							addToCart={this.props.addToCart}
+							state={this.props.state}
+							beforeProd={this.props.beforeProd}
+						/>))}
 				</div>
 			</div>
 		);
@@ -22,5 +29,6 @@ export default class Store extends Component {
 Store.propTypes = {
 	data: PropTypes.object.isRequired,
 	addToCart: PropTypes.func.isRequired,
+	beforeProd: PropTypes.func,
 	state: PropTypes.object.isRequired,
 };

@@ -10,8 +10,6 @@ data(
 			"minprice": 5,
 			"sug": 5,
 			"url": "../others/nipplerings.pdf",
-			"qtd": 0,
-			"userprice": 0,
 			"spec": "Livreto A5 com 8 páginas internas. Impressão p&b em sulfite 75g/m²"
 		},
 		{
@@ -23,8 +21,6 @@ data(
 			"minprice": 5,
 			"sug": 5,
 			"url": "../others/orquestra.pdf",
-			"qtd": 0,
-			"userprice": 0,
 			"spec": "Livreto A5 com 8 páginas internas. Impressão p&b em sulfite 75g/m²"
 		},
 		{
@@ -36,8 +32,6 @@ data(
 			"minprice": 5,
 			"sug": 5,
 			"url": "../others/lembrancas.pdf",
-			"qtd": 0,
-			"userprice": 0,
 			"spec": "Livreto A5 com 8 páginas internas. Impressão p&b em sulfite 75g/m²"
 		},
 	],
