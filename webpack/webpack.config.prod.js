@@ -64,6 +64,11 @@ module.exports = {
 				to: 'others',
 				ignore: '.gitkeep',
 			},
+			{
+				from: path.join(PATHS.src, 'templates/cname/CNAME'),
+				to: './',
+				ignore: '.gitkeep',
+			},
 		]),
 	],
 	module: {
