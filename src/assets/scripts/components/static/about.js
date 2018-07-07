@@ -39,6 +39,7 @@ export default class About extends Component {
 				<p>Esse site foi desenhado e desenvolvido completamente por Angelo Dias no Visual Studio Code.</p>
 				<p>Ele foi escrito em React. O HTML que não é JSX foi feito em Pug. O CSS é Stylus do começo ao fim. Um belo boilerplate com webpack fez sua magia e cuspiu o que você vê na sua tela agora.</p>
 				<p>Segundo o Wakatime, levei em torno de 20 horas para concluir o site — só com código, sem contar layout.</p>
+				<p>Agradeço Pilker, Rubens Fernandes, Thiago Almeida e Lucas Golino pelo boilerplate, feedbacks e (principalmente) pela enorme paciência. Agradeço especialmente a Lucas Golino pela implementação do back-end.</p>
 			</div>
 		);
 	}
