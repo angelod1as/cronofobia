@@ -34,12 +34,6 @@ data(
 			"url": "../others/lembrancas.pdf",
 			"spec": "Livreto A5 com 8 páginas internas. Impressão p&b em sulfite 75g/m²"
 		},
-	],
-	"about": [
-		{
-			"title": "Sobre",
-			"text": "<p>Queria saber descrever esse projeto como o pessoal das artes faz, sabe, cheios de pompa e elegância?<\/p><p>\"Cronofobia é a expressão gutural de sentimentos aprisionados transformados com leveza em impressos monocromáticos pelo multiartista Angelo Dias\".<\/p><p>(Que descrição mais troxa, meu Deus)<\/p><p>O projeto <em>Cronofobia<\/em> surgiu como uma forma de expressão de pensamentos e vivências que venho tendo. É um trabalho autoral, feito em casa, impresso em xerox e grampeado manualmente.<\/p><p>A ideia é ter algumas zines aleatórias que contam histórias e fazem alguns questionamentos (se pá). Haverá uma série numerada que trata do nome do projeto (cronofobia, o medo do tempo passar).<\/p><p>No fim das contas, é uma desculpa para produzir fora do que estou acostumado e fugir um pouco da ficção fantástica/científica. E é você quem financia essa merda.<\/p><p>Pfv financie, é daora.<\/p><p>Meu nome é <em>Angelo Dias<\/em>. Sou criador e editor-chefe do jornal satírico de ficção científica <a href=\"www.temposfantasticos.com\" target=\"_blank\"><em>Tempos Fantásticos<\/em><\/a>, roteirista do quadrinho Combo Breaker (ainda sem site) e participador de projetos alheios.<\/p><p>De dia, sou desenvolvedor front-end na Folha de S.Paulo, fazendo altos sites mutcholocos (tipo esse). <a href=\"www.angelodias.com.br\" target=\"_blank\">Conheça meu trabalho aqui<\/a>.<\/p><p>Tem perguntas sobre o projeto e não quer ser identificado? <a href=\"www.curiouscat.me/cronofobico\" target=\"_blank\">Mande aqui anonimamente<\/a>.<\/p>"
-		}
 	]
 }
 )
