@@ -10,7 +10,7 @@ data(
 			"minprice": 5,
 			"sug": 5,
 			"url": "../others/nipplerings.pdf",
-			"spec": "Livreto A5 com 8 páginas internas. Impressão p&b em sulfite 75g/m²"
+			"spec": "Livreto A5 grampeado com 8 páginas internas. Impressão p&b em sulfite 75g/m². Feito à mão e escaneado."
 		},
 		{
 			"id": 2,
@@ -21,7 +21,7 @@ data(
 			"minprice": 5,
 			"sug": 5,
 			"url": "../others/orquestra.pdf",
-			"spec": "Livreto A5 com 8 páginas internas. Impressão p&b em sulfite 75g/m²"
+			"spec": "Livreto A5 grampeado com 8 páginas internas. Impressão p&b em sulfite 75g/m². Feito digitalmente."
 		},
 		{
 			"id": 3,
@@ -32,7 +32,18 @@ data(
 			"minprice": 5,
 			"sug": 5,
 			"url": "../others/lembrancas.pdf",
-			"spec": "Livreto A5 com 8 páginas internas. Impressão p&b em sulfite 75g/m²"
+			"spec": "Livreto A5 grampeado com 8 páginas internas. Impressão p&b em sulfite 75g/m². Feito digitalmente."
+		},
+		{
+			"id": 4,
+			"title": "Eu fico puto",
+			"slug": "eu-fico-puto",
+			"desc": "As coisas dão um nervoso mas eu não reclamo. Guardo pra mim, bem lá dentro. O problema é que raiva guardada vira outra coisa.",
+			"img": "../../../images/euficoputo.jpg",
+			"minprice": 5,
+			"sug": 5,
+			"url": "../others/euficoputo.pdf",
+			"spec": "Livreto A5 grampeado com 8 páginas internas. Impressão p&b em sulfite 75g/m². Feito com máquina de escrever Olivetti Studio 46."
 		},
 	]
 }
