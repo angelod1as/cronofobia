@@ -45,6 +45,17 @@ data(
 			"url": "../others/euficoputo.pdf",
 			"spec": "Livreto A5 grampeado com 8 páginas internas. Impressão p&b em sulfite 75g/m². Feito com máquina de escrever Olivetti Studio 46."
 		},
+		{
+			"id": 5,
+			"title": "Bequadro",
+			"slug": "bequadro",
+			"desc": "Desmontado e remontado, o instrumento parece não ter defeitos. Mesmo assim, soa desafinado. Será que o problema é quem toca, o que é tocado, ou o ouvido de quem escuta? Autoestima em metáfora (nossa, que artista ele né?).",
+			"img": "../../../images/bequadro.jpg",
+			"minprice": 5,
+			"sug": 5,
+			"url": "../others/bequadro.pdf",
+			"spec": "Livreto A5 grampeado com 8 páginas internas. Impressão p&b em sulfite 75g/m². Feito digitalmente."
+		},
 	]
 }
 )
