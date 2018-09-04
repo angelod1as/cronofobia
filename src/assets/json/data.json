@@ -3,6 +3,7 @@ data(
 	"produtos": [
 		{
 			"id": 1,
+			"date": "25/5/18",
 			"title": "Nipple Rings",
 			"slug": "nipple-rings",
 			"desc": "De repente, em um encontro, devaneios sobre penduricalhos mamílicos. Um relato de um date que ficou na minha cabeça. Exemplos de como desenho mal.",
@@ -14,6 +15,7 @@ data(
 		},
 		{
 			"id": 2,
+			"date": "26/5/18",
 			"title": "Orquestra Vermelha",
 			"slug": "orquestra-vermelha",
 			"desc": "Relatos e pensamentos sobre um show da banda Orquestra Vermelha, de Matheus Leston. O que é uma banda? O que é música eletrônica? Um músico não presente é músico? Entre outras questões.",
@@ -25,6 +27,7 @@ data(
 		},
 		{
 			"id": 3,
+			"date": "22 a 24/6/18",
 			"title": "As lembranças que os objetos trazem",
 			"slug": "as-lembranças-que-os-objetos-trazem",
 			"desc": "Você já parou para pensar que, após sua morte, qualquer história que uma pessoa contar sobre você se torna automaticamente verdade? Quais as histórias que seus objetos contarão?",
@@ -36,6 +39,7 @@ data(
 		},
 		{
 			"id": 4,
+			"date": "14/8/18",
 			"title": "Eu fico puto",
 			"slug": "eu-fico-puto",
 			"desc": "As coisas dão um nervoso mas eu não reclamo. Guardo pra mim, bem lá dentro. O problema é que raiva guardada vira outra coisa.",
@@ -47,9 +51,10 @@ data(
 		},
 		{
 			"id": 5,
+			"date": "2/9/18",
 			"title": "Bequadro",
 			"slug": "bequadro",
-			"desc": "Desmontado e remontado, o instrumento parece não ter defeitos. Mesmo assim, soa desafinado. Será que o problema é quem toca, o que é tocado, ou o ouvido de quem escuta? Autoestima em metáfora (nossa, que artista ele né?).",
+			"desc": "Desmontado e remontado, o instrumento parece não ter defeitos. Mesmo assim, soa desafinado. Será que o problema é quem o toca, o que é tocado, ou o ouvido de quem escuta? Autoestima em metáfora (nossa, que artista ele né?).",
 			"img": "../../../images/bequadro.jpg",
 			"minprice": 5,
 			"sug": 5,

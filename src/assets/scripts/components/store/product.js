@@ -31,6 +31,7 @@ export default class Product extends Component {
 			url: p.url,
 			id: p.id,
 			spec: p.spec,
+			date: p.date,
 		});
 	}
 
@@ -60,6 +61,7 @@ export default class Product extends Component {
 						<h3 data-title={utils.slugfy(p.title)}>{p.title}</h3>
 						<p className="description">{p.desc}</p>
 						<p className="spec">{p.spec}</p>
+						<p className="spec">Feito em: {p.date}</p>
 						<p className="suggested">valor sugerido: R$ {p.sug}</p>
 						<p className="minimum">mínimo para impresso: R$ {p.minprice}</p>
 						{/* FORM */}
