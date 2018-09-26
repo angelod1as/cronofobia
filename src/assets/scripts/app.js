@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import qs from 'qs';
 
 import Opening from './components/static/opening';
 import Store from './components/store/store';
@@ -92,7 +93,8 @@ export default class App extends Component {
 
 	sendToPay(info) {
 		const myServer = 'http://backend-cronofobia-com.umbler.net/api/payment';
-		// const myServer = 'http://0.0.0.0:3000/api/payment';
+		// const myServer = 'http://0.0.0.0:3000/api/cronofobia';
+		const axiosData = qs.stringify({ data: info });
 
 		axios.post(myServer, { data: info })
 			.then((response) => {
