@@ -92,7 +92,8 @@ export default class App extends Component {
 	}
 
 	sendToPay(info) {
-		const myServer = 'http://backend-cronofobia-com.umbler.net/api/cronofobia';
+		const myServer = 'http://backend-cronofobia-com.umbler.net/cronofobia/store';
+		// const myServer = 'http://backend-cronofobia-com.umbler.net/api/cronofobia';
 		// const myServer = 'http://0.0.0.0:3000/api/cronofobia';
 		const axiosData = qs.stringify({ data: info });
 
