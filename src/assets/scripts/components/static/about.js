@@ -26,7 +26,7 @@ export default class About extends Component {
 				<p>Envie um email para oicronofobia[arroba]gmail.com</p>
 				<h2>Sobre</h2>
 				<p>Queria saber descrever esse projeto como o pessoal das artes faz, sabe, cheios de pompa e elegância?</p>
-				<p><i>{'"'}Cronofobia é a expressão gutural de sentimentos aprisionados transformados com leveza em impressos monocromáticos pelo multiartista Angelo Dias.{'"'}</i></p>
+				<p><i>&quot;Cronofobia é a expressão gutural de sentimentos aprisionados transformados com leveza em impressos monocromáticos pelo multiartista Angelo Dias.&quot;</i></p>
 				<p>Como não tenho essa capacidade, vaia assim mesmo: o projeto <em>Cronofobia</em> surgiu para expressar pensamentos e vivências. É um trabalho autoral, feito em casa, impresso em xerox e grampeado manualmente.</p>
 				<p>A ideia é ter algumas zines aleatórias que contam histórias e , se pá, fazem alguns questionamentos. Haverá uma série numerada para tratar sobre nome do projeto (cronofobia, o medo do tempo passar).</p>
 				<p>No fim das contas, é uma desculpa para produzir fora do que estou acostumado e fugir um pouco da ficção fantástica/científica. E é você quem financia essa merda.</p>
