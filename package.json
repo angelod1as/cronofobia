@@ -54,7 +54,7 @@
     "serve": "webpack-dev-server --color --hot --config ./webpack/webpack.config.dev.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "jsonp": "^0.2.1",
     "prop-types": "^15.6.1",
     "qs": "^6.5.2",
