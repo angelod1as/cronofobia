@@ -99,14 +99,21 @@ export default class Product extends Component {
 								defaultChecked={this.state.type === 'digital'}
 								onChange={this.handleChange}
 							/><span className="radio_margin">Digital</span>
-							<br /><input
+							<br />
+							<input
 								type="radio"
 								name="type"
 								value="impressa"
 								disabled={this.state.price < p.minprice}
 								defaultChecked={this.state.type === 'impressa'}
 								onChange={this.handleChange}
-							/><span className={`${this.state.price < p.minprice ? 'disabled' : 'notDisabled'} radio-margin`}>Impressa</span>
+							/>
+							<span
+							// className={`${this.state.price < p.minprice ? 'disabled' : 'notDisabled'} radio-margin`}
+								className="disabled radio-margin"
+							>
+								Impressa
+							</span>
 						</label>
 						{/* <button className="button">
 							+ carrinho
